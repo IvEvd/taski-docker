@@ -8,7 +8,7 @@ COPY package-lock.json package-lock.json
 RUN npm install 
 
 COPY . .
-RUN npm run build
+#RUN npm run build
 
-#CMD /bin/sh
-CMD ["npx", "-y", "http-server", "-p", "8000", "/app/build"]
+CMD /bin/sh
+#CMD ["npx", "-y", "http-server", "-p", "8000", "/app/build"]
