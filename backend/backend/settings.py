@@ -8,11 +8,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv(override=True)
 
-SECRET_KEY = os.getenv('SECRET_KEY_TASKI', default='test')
+SECRET_KEY = os.getenv('SECRET_KEY', default='test')
 
-DEBUG = os.getenv('DEBUG_TASKI')
+DEBUG = os.getenv('DEBUG') == 'True'
 
-ALLOWED_HOSTS_LIST = os.getenv('ALLOWED_HOSTS_TASKI')
+ALLOWED_HOSTS_LIST = os.getenv('ALLOWED_HOSTS')
 
 if ALLOWED_HOSTS_LIST:
     ALLOWED_HOSTS = ast.literal_eval(ALLOWED_HOSTS_LIST)
