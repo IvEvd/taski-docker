@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv(override=True)
 
-SECRET_KEY = os.getenv('SECRET_KEY_TASKI')
+SECRET_KEY = os.getenv('SECRET_KEY_TASKI', default='test')
 
 DEBUG = os.getenv('DEBUG_TASKI')
 
